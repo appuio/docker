@@ -36,6 +36,6 @@ ENV START_CMD "/usr/local/bin/django-admin"
 VOLUME ["/app/etc", "/app/data"]
 USER weblate
 
-EXPOSE 8000
+EXPOSE 8080
 ENTRYPOINT ["/app/bin/start"]
-CMD ["runserver", "0.0.0.0:8000"]
+CMD ["gunicorn", "weblate.wsgi:application", "--bind=0.0.0.0:8080",  "--access-logfile=-"]
