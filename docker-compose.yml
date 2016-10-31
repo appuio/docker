@@ -5,6 +5,8 @@ services:
     links:
       - database
       - cache
+    ports:
+      - "8080:8080"
     volumes:
       - weblate-data:/app/data
     env_file:
@@ -13,17 +15,6 @@ services:
     depends_on:
       - database
       - cache
-  web:
-    build: nginx
-    links:
-      - weblate
-    ports:
-      - "8000:80"
-    volumes_from:
-      - weblate:ro
-    restart: always
-    depends_on:
-      - weblate
   database:
     image: postgres:9.4
     env_file:
