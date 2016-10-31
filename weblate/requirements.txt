@@ -2,9 +2,9 @@ Django>=1.10,<1.11
 Whoosh>=2.7,<2.8
 django-crispy-forms==1.6.0
 python-social-auth==0.2.21
-translate-toolkit>=2.0.0b4,<2.1
+https://github.com/translate/translate/archive/master.tar.gz
 pyLibravatar==1.7
-Weblate==2.8
+https://github.com/appuio/weblate/archive/techlab.tar.gz
 pyuca==1.1
 django_compressor==2.1
 djangorestframework>=3.4,<3.5
@@ -12,6 +12,9 @@ defusedxml==0.4.1
 httpretty==0.8.14
 Babel==2.3.4
 PyDNS==2.3.6
+PyYAML>=3.0
+gunicorn
+whitenoise
 # Following are installed using apt:
 # Pillow
 # lxml
